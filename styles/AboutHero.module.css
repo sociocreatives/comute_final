@@ -1,0 +1,90 @@
+.container{
+    font-family: 'Poppins', sans-serif;
+    margin: auto 40px;
+}
+
+.mainhead{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media screen and (max-width: 960px){
+    .mainhead{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 1rem;
+    }
+  }
+
+.logoarea{
+    margin: 1rem 0rem;
+    padding: 0rem;
+    width: fit-content;
+}
+
+.heading{
+    background-color: gray;
+    padding: 3rem 3rem;
+    border-radius: 1.5rem;
+    margin: 5rem 0rem 3rem 0rem;
+    background-color: #002B5B;
+    color: white;
+    font-size: 1.2rem;
+    line-height: 2.75rem;
+}
+
+.traffic{
+    padding: 2rem;
+}
+
+@media screen and (max-width: 960px){
+    .traffic{
+        padding: 1rem;
+    }
+  }
+
+
+.mapping{
+    background-color: #256D85;
+    padding: 3rem 3rem;
+    border-radius: 1.5rem;
+}
+
+@media screen and (max-width: 960px){
+    .mapping{
+        display: flex;
+        flex-direction: column;
+        background-color: #256D85;
+        padding: 3rem 3rem;
+        border-radius: 1.5rem;
+    }
+  }
+
+.interfaces{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 2rem;
+}
+
+.mapping{
+    display: flex;
+    gap: 2rem;
+    padding: 3rem;
+    color:#002B5B;
+    margin-bottom: 3rem;
+}
+
+.tlight{
+    margin: 1rem 3rem;
+}
+
+@media screen and (max-width: 960px){
+    .tlight{
+       display: none;
+    }
+  }
