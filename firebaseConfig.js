@@ -1,14 +1,16 @@
-
-import { initializeApp } from "firebase/app";
+import firebase from "firebase/app"
+import "firebase/auth"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAGUL8sIcJ34eDPsAs46U84Mnruj_pjs7s",
-  authDomain: "comuter-auth.firebaseapp.com",
-  projectId: "comuter-auth",
-  storageBucket: "comuter-auth.appspot.com",
-  messagingSenderId: "799808018003",
-  appId: "1:799808018003:web:342b8498a460af69a518a6"
+    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+    appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+    databaseURL: process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL,
+    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
 };
 
-// Initialize Firebase
-export const app = initializeApp(firebaseConfig);
+const firebaseApp = firebase.initializeApp(firebaseConfig)
+export const auth = firebaseApp.auth()
+export default firebaseApp

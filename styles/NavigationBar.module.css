@@ -1,7 +1,10 @@
 .Container{
     background-color: transparent;
-    height: 80px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    height: 100px;
     width: 100%;
+    margin-bottom: 2rem;
 }
 
 .body{
@@ -11,6 +14,11 @@
     align-items: center;
     margin: 0 40px;
 }
+@media screen and (max-width: 960px){
+    .body{
+        margin: 0 20px;
+    }
+  }
 
 .logo{
     cursor: pointer;
@@ -23,6 +31,12 @@
     gap: 1.5rem;
     cursor: pointer;
 }
+
+@media screen and (max-width: 960px){
+    .list{
+        display: none;
+    }
+  }
 
 .btn{
     cursor: pointer;
@@ -50,3 +64,16 @@
     border: #002B5B solid 2px;
     background-color: #002B5B;
 }
+
+.humburger{
+    color: #002B5B;
+    font-size: 1.75rem;
+    display: none;
+}
+
+@media screen and (max-width: 960px){
+    .humburger{
+        display: block;
+    }
+  }
+

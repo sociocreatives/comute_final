@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Data } from "./Data";
-import { IconContext } from "react-icons";
 import { FiPlus, FiMinus } from "react-icons/fi";
-// import Fade from "react-reveal/Fade";
 import styles from "../../styles/Faq.module.css"
 
 

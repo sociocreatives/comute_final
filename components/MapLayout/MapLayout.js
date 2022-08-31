@@ -3,8 +3,7 @@ import { HiOutlineLogout } from 'react-icons/hi';
 import Link from 'next/link';
 import { MdMyLocation } from 'react-icons/md'
 import styles from "../../styles/MapLayout.module.css"
-import { GoogleMap, useLoadScript, InfoWindow, useJsApiLoader, Marker, Autocomplete, DirectionsService, DirectionsRenderer, Polyline } from '@react-google-maps/api';
-import {usePlacesAutoComplete, getGeocode, getLatLng} from 'use-places-autocomplete'
+import { GoogleMap, useLoadScript, InfoWindow, Marker, Autocomplete, DirectionsRenderer } from '@react-google-maps/api';
 import NavigationBarHome from '../NavigationBarHome/NavigationBarHome';
 import "animate.css/animate.min.css";
 import { formatRelative } from "date-fns";
@@ -306,11 +305,7 @@ const MapLayout = () => {
         <NavigationBarHome/>
         <div className={styles.header}>
         <h3>Driving Routes</h3>
-        <MdMyLocation className={styles.mylocation}/>
-
-          <Locate panTo={panTo} />
-         
-        </div>
+        <MdMyLocation className={styles.mylocation} panTo={panTo} /></div>
         <div> 
             <Autocomplete><input type="text" placeholder='Select Starting Point' className={styles.input} ref={originRef}/></Autocomplete>
             <Autocomplete><input type="text" placeholder='Select Destination' className={styles.input} ref={destinationRef}/></Autocomplete>
@@ -327,7 +322,7 @@ const MapLayout = () => {
 
     <GoogleMap 
         mapContainerStyle={mapContainerStyles} 
-        zoom={15} 
+        zoom={14} 
         center={center}
         options={options}
         onLoad={onMapLoad}
